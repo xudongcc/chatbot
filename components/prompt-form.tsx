@@ -78,10 +78,10 @@ export function PromptForm({
               }}
             >
               <IconPlus />
-              <span className="sr-only">New Chat</span>
+              <span className="sr-only">新会话</span>
             </Button>
           </TooltipTrigger>
-          <TooltipContent>New Chat</TooltipContent>
+          <TooltipContent>新会话</TooltipContent>
         </Tooltip>
         <Textarea
           ref={inputRef}
