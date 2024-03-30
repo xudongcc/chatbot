@@ -30,14 +30,14 @@ export default function LoginForm() {
       className="flex flex-col items-center gap-4 space-y-3"
     >
       <div className="w-full flex-1 rounded-lg border bg-white px-6 pb-4 pt-8 shadow-md  md:w-96 dark:bg-zinc-950">
-        <h1 className="mb-3 text-2xl font-bold">Please log in to continue.</h1>
+        <h1 className="mb-3 text-2xl font-bold">登录</h1>
         <div className="w-full">
           <div>
             <label
               className="mb-3 mt-5 block text-xs font-medium text-zinc-400"
               htmlFor="email"
             >
-              Email
+              电子邮箱
             </label>
             <div className="relative">
               <input
@@ -45,7 +45,7 @@ export default function LoginForm() {
                 id="email"
                 type="email"
                 name="email"
-                placeholder="Enter your email address"
+                placeholder="输入您的电子邮件地址"
                 required
               />
             </div>
@@ -55,7 +55,7 @@ export default function LoginForm() {
               className="mb-3 mt-5 block text-xs font-medium text-zinc-400"
               htmlFor="password"
             >
-              Password
+              密码
             </label>
             <div className="relative">
               <input
@@ -63,7 +63,7 @@ export default function LoginForm() {
                 id="password"
                 type="password"
                 name="password"
-                placeholder="Enter password"
+                placeholder="输入密码"
                 required
                 minLength={6}
               />
@@ -77,7 +77,7 @@ export default function LoginForm() {
         href="/signup"
         className="flex flex-row gap-1 text-sm text-zinc-400"
       >
-        No account yet? <div className="font-semibold underline">Sign up</div>
+        还没有帐户？ <div className="font-semibold underline">注册</div>
       </Link>
     </form>
   )
@@ -91,7 +91,7 @@ function LoginButton() {
       className="my-4 flex h-10 w-full flex-row items-center justify-center rounded-md bg-zinc-900 p-2 text-sm font-semibold text-zinc-100 hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
       aria-disabled={pending}
     >
-      {pending ? <IconSpinner /> : 'Log in'}
+      {pending ? <IconSpinner /> : '登录'}
     </button>
   )
 }
