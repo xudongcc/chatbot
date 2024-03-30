@@ -58,6 +58,7 @@ export const {
       id: 'bi',
       name: 'bi',
       type: 'oauth',
+      checks: ['none'],
       clientId: process.env.BI_CLIENT_ID,
       clientSecret: process.env.BI_CLIENT_SECRET,
       authorization: `${process.env.BI_URL}/user-authorize?clientName=${process.env.BI_CLIENT_NAME}`,
