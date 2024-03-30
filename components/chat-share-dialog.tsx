@@ -35,14 +35,14 @@ export function ChatShareDialog({
   const copyShareLink = React.useCallback(
     async (chat: Chat) => {
       if (!chat.sharePath) {
-        return toast.error('Could not copy share link to clipboard')
+        return toast.error('无法将分享链接复制到剪贴板')
       }
 
       const url = new URL(window.location.href)
       url.pathname = chat.sharePath
       copyToClipboard(url.toString())
       onCopy()
-      toast.success('Share link copied to clipboard')
+      toast.success('分享链接已复制到剪贴板')
     },
     [copyToClipboard, onCopy]
   )
@@ -51,9 +51,9 @@ export function ChatShareDialog({
     <Dialog {...props}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Share link to chat</DialogTitle>
+          <DialogTitle>分享会话链接</DialogTitle>
           <DialogDescription>
-            Anyone with the URL will be able to view the shared chat.
+            任何拥有会话链接的人都可以查看共享聊天。
           </DialogDescription>
         </DialogHeader>
         <div className="p-4 space-y-1 text-sm border rounded-md">
@@ -82,10 +82,10 @@ export function ChatShareDialog({
             {isSharePending ? (
               <>
                 <IconSpinner className="mr-2 animate-spin" />
-                Copying...
+                复制中...
               </>
             ) : (
-              <>Copy link</>
+              <>复制链接</>
             )}
           </Button>
         </DialogFooter>
