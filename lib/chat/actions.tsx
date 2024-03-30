@@ -37,6 +37,7 @@ import { Chat } from '@/lib/types'
 import { auth } from '@/auth'
 
 const openai = new OpenAI({
+  baseURL: process.env.OPENAI_BASE_URL || '',
   apiKey: process.env.OPENAI_API_KEY || ''
 })
 
