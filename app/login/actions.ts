@@ -21,6 +21,13 @@ export async function authenticate(
   _prevState: Result | undefined,
   formData: FormData
 ): Promise<Result | undefined> {
+  const provider = formData.get('provider')
+
+  if (typeof provider === 'string') {
+    await signIn(provider)
+    return
+  }
+
   try {
     const email = formData.get('email')
     const password = formData.get('password')
