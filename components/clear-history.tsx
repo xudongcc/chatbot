@@ -44,11 +44,11 @@ export function ClearHistory({
         <AlertDialogHeader>
           <AlertDialogTitle>你确定吗？</AlertDialogTitle>
           <AlertDialogDescription>
-            这将永久删除您的聊天记录并删除您的数据，这个操作无法撤销。
+            这将永久删除您的所有会话记录。
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel disabled={isPending}>Cancel</AlertDialogCancel>
+          <AlertDialogCancel disabled={isPending}>取消</AlertDialogCancel>
           <AlertDialogAction
             disabled={isPending}
             onClick={event => {
